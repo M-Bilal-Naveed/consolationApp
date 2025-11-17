@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const signUp = () => {
+const forgetPassword = () => {
   return (
     <View>
       
@@ -9,6 +9,6 @@ const signUp = () => {
   )
 }
 
-export default signUp
+export default forgetPassword
 
 const styles = StyleSheet.create({})
