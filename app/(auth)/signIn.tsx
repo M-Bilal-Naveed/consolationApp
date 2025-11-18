@@ -4,31 +4,27 @@ import { Colors } from "@/constants/theme";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const signUp = () => {
+const SignIn = () => {
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.heading}> Sign Up</Text>
-        <Text style={styles.text}>Create an account to continue!</Text>
+        <Text style={styles.heading}> Sign in to your Account</Text>
+        <Text style={styles.text}>Enter your email and password to log in</Text>
       </View>
       <View style={{ marginTop: 30 }}>
-        <Text style={styles.label}>Full Name</Text>
-        <Input placeholdertext="Lois Becket" type="default" />
-      </View>
-      <View>
         <Text style={styles.label}>Email</Text>
-        <Input placeholdertext="lois.becket@example.com" type="email-address" />
+        <Input placeholdertext="Loisbecket@gmail.com" type="email-address" />
       </View>
       <View>
         <Text style={styles.label}>Password</Text>
-        <PasswordInput placeholdertext="Password" type="password" />
+        <PasswordInput placeholdertext="*******" type="password" />
       </View>
+      <Text style={styles.ForgotPassword}>Forgot Password ?</Text>
     </View>
   );
 };
 
-export default signUp;
-
+export default SignIn;
 const styles = StyleSheet.create({
   container: {
     padding: 20,
@@ -46,7 +42,7 @@ const styles = StyleSheet.create({
   heading: {
     color: Colors.dark.text,
     fontFamily: "Poppins-Bold",
-    fontSize: 27,
+    fontSize: 30,
     width: "100%",
   },
   text: {
@@ -56,5 +52,8 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     padding: 2,
     marginTop: 10,
+  },
+  ForgotPassword: {
+    textAlign: "right",
   },
 });
