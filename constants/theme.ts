@@ -11,6 +11,8 @@ export default {
     tabIconSelected: tintColorLight,
     shadow: "#6C72783D",
     redishButton:"#E11304",
+    AuthText:"#1A1C1E",
+     AuthBorder:"#EFF0F6",
   },
   dark: {
     text: "#FFFF",
@@ -21,5 +23,7 @@ export default {
     tabIconSelected: tintColorDark,
     shadow: "#6C72783D",
     redishButton:"#E11304",
+    AuthText:"#1A1C1E",
+    AuthBorder:"#EFF0F6",
   },
 };

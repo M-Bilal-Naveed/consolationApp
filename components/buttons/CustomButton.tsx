@@ -3,7 +3,7 @@ import  Colors  from '@/constants/theme';
 import Font from '@/constants/Fonts'
 
 type CustomButton ={
-    title: string,
+    title?: string,
 }
 
 const CustomButton:React.FC<CustomButton>= ({title}) => {
