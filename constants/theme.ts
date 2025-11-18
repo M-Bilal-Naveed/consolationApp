@@ -1,10 +1,10 @@
 const tintColorLight = "#000000";
-const tintColorDark = "#ffffff";
+const tintColorDark = "#FFFF";
 
 export default {
   light: {
-    text: "#11181C",
-    background: "#1A1C1E",
+    text: "#FFFF",
+    background: "#0D0D0D",
     tint: tintColorLight,
     icon: "#687076",
     tabIconDefault: "#687076",
@@ -13,8 +13,8 @@ export default {
     redishButton:"#E11304",
   },
   dark: {
-    text: "#ECEDEE",
-    background: "#1A1C1E",
+    text: "#FFFF",
+    background: "#0D0D0D",
     tint: tintColorDark,
     icon: "#9BA1A6",
     tabIconDefault: "#9BA1A6",
