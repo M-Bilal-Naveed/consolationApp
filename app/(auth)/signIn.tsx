@@ -7,7 +7,7 @@ import AuthButton from "@/components/buttons/AuthButton";
 const LogIn = () => {
   return (
     <View style={styles.container}>
-      <CustomButton title="Hello"/>
+      
     </View>
   );
 };
