@@ -3,13 +3,14 @@ import Colors from '@/constants/theme';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-type CustomButton ={
-    title?: string,
-    style?: object,
-    onPress?: ()=> void,
-}
 
-const CustomButton:React.FC<CustomButton>= ({title, onPress, style}) => {
+type CustomButtonProps = {
+  title?: string;
+  style?: object;
+  onPress?: () => void;
+};
+
+const CustomButton: React.FC<CustomButtonProps> = ({ title, onPress, style }) => {
   return (
     <TouchableOpacity 
     style={[styles.container, style]}
@@ -20,12 +21,12 @@ const CustomButton:React.FC<CustomButton>= ({title, onPress, style}) => {
         start={{x:0.2,y:0.5}}
         end={{x:0,y:0.5}}
       />
-        <Text style={styles.title}>{title}</Text>
+      <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
-  )
-}
+  );
+};
 
-export default CustomButton
+export default CustomButton;
 
 const styles = StyleSheet.create({
     container:{

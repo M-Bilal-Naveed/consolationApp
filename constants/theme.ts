@@ -10,6 +10,7 @@ export default {
     tabIconDefault: "#687076",
     tabIconSelected: tintColorLight,
     shadow: "#6C72783D",
+    Label: "#6C7278",
     redishButton:"#E11304",
     AuthText:"#1A1C1E",
      AuthBorder:"#EFF0F6",

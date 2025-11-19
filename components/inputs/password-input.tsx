@@ -1,13 +1,18 @@
-import { Colors } from "@/constants/theme";
+import Colors from "@/constants/theme";
 import React from "react";
-import { StyleSheet, TextInput, View } from "react-native";
+import Icon from "react-native-vector-icons/Feather";
 
+import { StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
 interface InputProps {
   placeholdertext: string;
   type: "password";
 }
 
 const PasswordInput: React.FC<InputProps> = ({ placeholdertext, type }) => {
+  const [showPassword, setShowPassword] = React.useState(false);
+  const handlePassword = () => {
+    setShowPassword(!showPassword);
+  };
   return (
     <View>
       <TextInput
@@ -17,7 +22,16 @@ const PasswordInput: React.FC<InputProps> = ({ placeholdertext, type }) => {
         style={styles.input}
         placeholderTextColor={Colors.dark.text}
       />
-      
+      <View style={{ position: "absolute", right: 10, top: 25 }}>
+        <TouchableOpacity onPress={handlePassword}>
+          <Icon
+            name={showPassword ? "eye-off" : "eye"}
+            size={18}
+            color="gray"
+            style={styles.icon}
+          />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -37,5 +51,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: Colors.dark.text,
     marginVertical: 10,
+    position: "relative",
+  },
+  icon: {
+    padding: 5,
   },
 });
