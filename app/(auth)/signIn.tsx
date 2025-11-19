@@ -1,5 +1,5 @@
-import AuthButton from "@/components/buttons/AuthButton";
 import CustomButton from "@/components/buttons/CustomButton";
+
 import Input from "@/components/inputs/input";
 import PasswordInput from "@/components/inputs/password-input";
 import Colors from "@/constants/theme";
@@ -25,11 +25,24 @@ const SignIn = () => {
       <Text style={styles.ForgotPassword}>Forgot Password ?</Text>
 
       <View>
-        <CustomButton title="Hello" />
-        <AuthButton
-          title="Hemllo"
-          image={require("@/assets/SocialIcons/google.png")}
-        />
+        <CustomButton title="Log In" />
+      </View>
+
+      <View
+        style={{ flexDirection: "row", alignItems: "center", marginTop: 20 }}
+      >
+        <View style={{ flex: 1, height: 1, backgroundColor: "white" }} />
+        <View>
+          <Text style={{ width: 50, textAlign: "center", color: "white" }}>
+            or
+          </Text>
+        </View>
+        <View style={{ flex: 1, height: 1, backgroundColor: "white" }} />
+      </View>
+      <View style={styles.linecontainer}>
+        <View style={styles.line} />
+        <Text style={styles.linetext}>Hello</Text>
+        <View style={styles.line} />
       </View>
     </View>
   );
@@ -69,5 +82,18 @@ const styles = StyleSheet.create({
     textAlign: "right",
     color: Colors.light.redishButton,
     paddingHorizontal: 10,
+  },
+  linecontainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  line: {
+    flex: 1,
+    height: 1,
+    backgroundColor: "black",
+  },
+  linetext: {
+    width: 50,
+    textAlign: "center",
   },
 });

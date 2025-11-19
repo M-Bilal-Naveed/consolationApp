@@ -1,7 +1,6 @@
 import Font from "@/constants/fonts";
 import Colors from "@/constants/theme";
 import {
-  GestureResponderEvent,
   Image,
   ImageSourcePropType,
   StyleSheet,
@@ -14,14 +13,10 @@ type AuthButtonProps = {
   title?: string;
   image?: ImageSourcePropType;
   style?: object;
-  onPress?: (event: GestureResponderEvent) => void;
+  onPress?: () => void;
 };
 
-const AuthButton: React.FC<AuthButtonProps> = ({ title, image, style }) => {
-  function onPress(event: GestureResponderEvent): void {
-    throw new Error("Function not implemented.");
-  }
-
+const AuthButton: React.FC<AuthButtonProps> = ({ title, image, style, onPress }) => {
   return (
     <TouchableOpacity style={[styles.container, style]} onPress={onPress}>
       <View style={styles.buttonView}>
