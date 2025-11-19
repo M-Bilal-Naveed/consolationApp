@@ -10,9 +10,6 @@ import { StyleSheet, Text, View } from "react-native";
 const SignIn = () => {
   return (
     <View style={styles.container}>
-<<<<<<< HEAD
-      
-=======
       <View>
         <Text style={styles.heading}> Sign in to your Account</Text>
         <Text style={styles.text}>Enter your email and password to log in</Text>
@@ -47,7 +44,6 @@ const SignIn = () => {
         <Text style={styles.linetext}>Hello</Text>
         <View style={styles.line} />
       </View>
->>>>>>> 7a3ec06b32373ef498c36e741aed829bc361e585
     </View>
   );
 };
