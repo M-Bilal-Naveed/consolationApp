@@ -8,7 +8,6 @@ const LogIn = () => {
   return (
     <View style={styles.container}>
       <CustomButton title="Hello"/>
-      <AuthButton title="Hemllo" image={require('@/assets/SocialIcons/google.png')} />
     </View>
   );
 };

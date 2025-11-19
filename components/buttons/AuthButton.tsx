@@ -1,4 +1,4 @@
-import { GestureResponderEvent, Image, ImageSourcePropType, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, ImageSourcePropType, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import  Colors  from '@/constants/theme';
 import Font from '@/constants/Fonts'
 
@@ -6,14 +6,10 @@ type AuthButton ={
     title?: string,
     image?: ImageSourcePropType,
     style?: object,
-    onPress?: (event: GestureResponderEvent)=> void,
+    onPress?: ()=> void,
 }
 
-const AuthButton:React.FC<AuthButton>= ({title, image, style}) => {
-    function onPress(event: GestureResponderEvent): void {
-        throw new Error('Function not implemented.');
-    }
-
+const AuthButton:React.FC<AuthButton>= ({title, image, style, onPress}) => {
   return (
     <TouchableOpacity 
     style={[styles.container, style]}
