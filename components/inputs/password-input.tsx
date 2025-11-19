@@ -1,4 +1,4 @@
-import { Colors } from "@/constants/theme";
+import Colors from "@/constants/theme";
 import React from "react";
 import Icon from "react-native-vector-icons/Feather";
 

@@ -1,6 +1,9 @@
+import AuthButton from "@/components/buttons/AuthButton";
+import CustomButton from "@/components/buttons/CustomButton";
 import Input from "@/components/inputs/input";
 import PasswordInput from "@/components/inputs/password-input";
-import { Colors } from "@/constants/theme";
+import Colors from "@/constants/theme";
+
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -20,6 +23,14 @@ const SignIn = () => {
         <PasswordInput placeholdertext="*******" type="password" />
       </View>
       <Text style={styles.ForgotPassword}>Forgot Password ?</Text>
+
+      <View>
+        <CustomButton title="Hello" />
+        <AuthButton
+          title="Hemllo"
+          image={require("@/assets/SocialIcons/google.png")}
+        />
+      </View>
     </View>
   );
 };
@@ -30,9 +41,10 @@ const styles = StyleSheet.create({
     padding: 20,
     flex: 1,
     marginTop: 50,
+    backgroundColor: Colors.light.background,
   },
   label: {
-    color: Colors.dark.Label,
+    color: Colors.light.Label,
     fontFamily: "Poppins-Medium",
     fontSize: 12,
     lineHeight: 25,
@@ -46,7 +58,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   text: {
-    color: Colors.dark.Label,
+    color: Colors.light.Label,
     fontFamily: "Poppins-Medium",
     fontSize: 12,
     lineHeight: 20,
@@ -55,5 +67,7 @@ const styles = StyleSheet.create({
   },
   ForgotPassword: {
     textAlign: "right",
+    color: Colors.light.redishButton,
+    paddingHorizontal: 10,
   },
 });

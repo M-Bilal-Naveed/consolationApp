@@ -1,6 +1,6 @@
 import Input from "@/components/inputs/input";
 import PasswordInput from "@/components/inputs/password-input";
-import { Colors } from "@/constants/theme";
+import Colors from "@/constants/theme";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -23,6 +23,7 @@ const signUp = () => {
         <Text style={styles.label}>Password</Text>
         <PasswordInput placeholdertext="Password" type="password" />
       </View>
+      <View></View>
     </View>
   );
 };
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   label: {
-    color: Colors.dark.Label,
+    color: Colors.light.Label,
     fontFamily: "Poppins-Medium",
     fontSize: 12,
     lineHeight: 25,
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   text: {
-    color: Colors.dark.Label,
+    color: Colors.light.Label,
     fontFamily: "Poppins-Medium",
     fontSize: 12,
     lineHeight: 20,
