@@ -8,7 +8,7 @@ import AuthLayout from "./authLayout";
 
 const verification = () => {
   return (
-    <AuthLayout type="Default" ButtonType={false}>
+    <AuthLayout type="Default" ButtonType={false} centerChildren>
       <ScrollView
         contentContainerStyle={{ flexGrow: 1 }}
         showsVerticalScrollIndicator={false}

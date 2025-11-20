@@ -9,14 +9,16 @@ const AuthLayout = ({
   children,
   type,
   ButtonType,
+  centerChildren,
 }: {
   children: React.ReactNode;
   type: "signin" | "signup" | "Default";
   ButtonType?: boolean;
+  centerChildren?: boolean;
 }) => {
   return (
     <View style={styles.container}>
-      <View style={styles.logos}>
+      <View style={[styles.logos, centerChildren && styles.logosNoFlex]}>
         <Image
           source={images.dd}
           style={{ width: 37, height: 48, resizeMode: "contain" }}
@@ -32,7 +34,9 @@ const AuthLayout = ({
         />
       </View>
 
-      <View>{children}</View>
+      <View style={centerChildren ? styles.centerChildren : undefined}>
+        {children}
+      </View>
       <View>
         {ButtonType ? (
           <View>
@@ -160,5 +164,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 10,
     marginVertical: 20,
+  },
+  logosNoFlex: {
+    flex: 0,
+    marginVertical: 20,
+  },
+  centerChildren: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
