@@ -15,7 +15,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   style,
 }) => {
   return (
-    <TouchableOpacity style={[styles.container, style]} onPress={onPress}>
+    <TouchableOpacity style={[styles.container, style]} onPress={onPress} >
       <LinearGradient
         colors={[Colors.light.redishButton, Colors.light.redishButton]}
         style={styles.background}

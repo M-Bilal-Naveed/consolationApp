@@ -27,7 +27,7 @@ const SignIn = () => {
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled"
       >
-        <AuthLayout type="signin">
+        <AuthLayout type="signin" ButtonType={true}>
           <View style={styles.container}>
             <View>
               <Text style={styles.heading}>Sign in to your Account</Text>
@@ -51,7 +51,9 @@ const SignIn = () => {
             <Link href={"/(auth)/forgetPassword"}>
               <Text style={styles.ForgotPassword}>Forgot Password ?</Text>
             </Link>
-            <CustomButton title="Log In" />
+            <View style={{ marginTop: 10 }}>
+              <CustomButton title="Log In" />
+            </View>
           </View>
         </AuthLayout>
       </ScrollView>
@@ -89,6 +91,6 @@ const styles = StyleSheet.create({
     color: Colors.light.redishButton,
     fontSize: 12,
     fontFamily: "Poppins-semiBold",
-    marginVertical: 15,
+    margin: 25,
   },
 });

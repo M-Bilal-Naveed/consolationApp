@@ -24,7 +24,7 @@ const signUp = () => {
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled"
       >
-        <AuthLayout type="signup">
+        <AuthLayout type="signup" ButtonType={true}>
           <View style={styles.container}>
             <View>
               <Text style={styles.heading}> Sign Up</Text>
