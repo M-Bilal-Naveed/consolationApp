@@ -17,7 +17,7 @@ const PasswordInput: React.FC<InputProps> = ({ placeholdertext, type }) => {
     <View>
       <TextInput
         placeholder={placeholdertext}
-        secureTextEntry={true}
+        secureTextEntry={showPassword}
         keyboardType="default"
         style={styles.input}
         placeholderTextColor={Colors.dark.text}

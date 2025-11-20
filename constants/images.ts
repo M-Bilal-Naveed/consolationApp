@@ -10,4 +10,6 @@ export default{
     calendar: require('@/assets/icons/calender.png'),
     profile: require('@/assets/icons/profile.png'),
     profileRed: require('@/assets/icons/profile-r.png'),
+    Google: require("@/assets/SocialIcons/google.png"),
+    facebook: require("@/assets/SocialIcons/facebook.png"),
 }

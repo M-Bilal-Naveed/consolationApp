@@ -4,58 +4,66 @@ import Input from "@/components/inputs/input";
 import PasswordInput from "@/components/inputs/password-input";
 import Colors from "@/constants/theme";
 
+import { Link } from "expo-router";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
+import AuthLayout from "./authLayout";
 
 const SignIn = () => {
   return (
-    <View style={styles.container}>
-      <View>
-        <Text style={styles.heading}> Sign in to your Account</Text>
-        <Text style={styles.text}>Enter your email and password to log in</Text>
-      </View>
-      <View style={{ marginTop: 30 }}>
-        <Text style={styles.label}>Email</Text>
-        <Input placeholdertext="Loisbecket@gmail.com" type="email-address" />
-      </View>
-      <View>
-        <Text style={styles.label}>Password</Text>
-        <PasswordInput placeholdertext="*******" type="password" />
-      </View>
-      <Text style={styles.ForgotPassword}>Forgot Password ?</Text>
-
-      <View>
-        <CustomButton title="Log In" />
-      </View>
-
-      <View
-        style={{ flexDirection: "row", alignItems: "center", marginTop: 20 }}
+    <KeyboardAvoidingView
+      style={{ flex: 1 }}
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+    >
+      <ScrollView
+        contentContainerStyle={{ flexGrow: 1, paddingBottom: 40 }}
+        showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled"
       >
-        <View style={{ flex: 1, height: 1, backgroundColor: "white" }} />
-        <View>
-          <Text style={{ width: 50, textAlign: "center", color: "white" }}>
-            or
-          </Text>
-        </View>
-        <View style={{ flex: 1, height: 1, backgroundColor: "white" }} />
-      </View>
-      <View style={styles.linecontainer}>
-        <View style={styles.line} />
-        <Text style={styles.linetext}>Hello</Text>
-        <View style={styles.line} />
-      </View>
-    </View>
+        <AuthLayout type="signin" ButtonType={true}>
+          <View style={styles.container}>
+            <View>
+              <Text style={styles.heading}>Sign in to your Account</Text>
+              <Text style={styles.text}>
+                Enter your email and password to log in
+              </Text>
+            </View>
+
+            <View style={{ marginTop: 30 }}>
+              <Text style={styles.label}>Email</Text>
+              <Input
+                placeholdertext="Loisbecket@gmail.com"
+                type="email-address"
+              />
+            </View>
+
+            <View>
+              <Text style={styles.label}>Password</Text>
+              <PasswordInput placeholdertext="*******" type="password" />
+            </View>
+            <Link href={"/(auth)/forgetPassword"}>
+              <Text style={styles.ForgotPassword}>Forgot Password ?</Text>
+            </Link>
+            <View style={{ marginTop: 10 }}>
+              <CustomButton title="Log In" />
+            </View>
+          </View>
+        </AuthLayout>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 };
 
 export default SignIn;
 const styles = StyleSheet.create({
-  container: {
-    padding: 20,
-    flex: 1,
-    marginTop: 50,
-    backgroundColor: Colors.light.background,
-  },
+  container: {},
   label: {
     color: Colors.light.Label,
     fontFamily: "Poppins-Medium",
@@ -81,19 +89,8 @@ const styles = StyleSheet.create({
   ForgotPassword: {
     textAlign: "right",
     color: Colors.light.redishButton,
-    paddingHorizontal: 10,
-  },
-  linecontainer: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  line: {
-    flex: 1,
-    height: 1,
-    backgroundColor: "black",
-  },
-  linetext: {
-    width: 50,
-    textAlign: "center",
+    fontSize: 12,
+    fontFamily: "Poppins-semiBold",
+    margin: 25,
   },
 });
