@@ -1,9 +1,8 @@
+import font from '@/constants/fonts';
+import images from '@/constants/images';
 import Colors from "@/constants/theme";
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
-
-import font from "@/constants/fonts";
-import images from "@/constants/images";
 import AuthLayout from "./authLayout";
 
 const verification = () => {

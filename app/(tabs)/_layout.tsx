@@ -1,9 +1,8 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
-import { Tabs } from 'expo-router';
-import Feather from '@expo/vector-icons/Feather';
-import icon from '@/constants/Images';
-import font from '@/constants/Fonts';
+import icon from '@/constants/images';
 import Color from '@/constants/theme';
+import Feather from '@expo/vector-icons/Feather';
+import { Tabs } from 'expo-router';
+import { Image, StyleSheet, View } from 'react-native';
 
 const tabLayout = () => {
 

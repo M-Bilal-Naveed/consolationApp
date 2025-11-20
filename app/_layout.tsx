@@ -5,6 +5,8 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 import { useColorScheme } from '@/hooks/use-color-scheme';
+import { useEffect } from 'react';
+import * as SplashScreen from 'expo-splash-screen';
 
 export const unstable_settings = {
   anchor: '(tabs)',
@@ -19,10 +21,24 @@ export default function RootLayout() {
     PoppinBold:require('@/assets/fonts/Poppins-Bold.ttf'),
     ...FontAwesome.font
   });
+
+  useEffect(() => {
+    if (error) throw error;
+  }, [error]);
+
+  useEffect(() => {
+    if (loaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [loaded]);
+
+  if (!loaded) {
+    return null;
+  }
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        {/* <Stack.Screen name="(auth)" options={{headerShown: false}} /> */}
+        <Stack.Screen name="(auth)" options={{headerShown: false}} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
