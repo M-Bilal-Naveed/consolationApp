@@ -1,7 +1,15 @@
-export default {
-  logo: require("@/assets/images/logo.png"),
-  dd: require("@/assets/images/DD.png"),
-  verify: require("@/assets/images/verify-Mark.png"),
-  Google: require("@/assets/SocialIcons/google.png"),
-  facebook: require("@/assets/SocialIcons/facebook.png"),
-};
+export default{
+    logo: require('@/assets/images/logo.png'),
+    dd: require('@/assets/images/DD.png'),
+    verify: require('@/assets/images/verify-Mark.png'),
+    home: require('@/assets/icons/home.png'),
+    homeRed: require('@/assets/icons/home-r.png'),
+    search: require('@/assets/icons/search.png'),
+    chat: require('@/assets/icons/chat.png'),
+    chatRed: require('@/assets/icons/chat-r.png'),
+    calendar: require('@/assets/icons/calender.png'),
+    profile: require('@/assets/icons/profile.png'),
+    profileRed: require('@/assets/icons/profile-r.png'),
+    Google: require("@/assets/SocialIcons/google.png"),
+    facebook: require("@/assets/SocialIcons/facebook.png"),
+}
