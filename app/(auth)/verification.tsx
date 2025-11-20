@@ -1,15 +1,10 @@
-import font from '@/constants/fonts';
-import images from '@/constants/images';
-import Colors from "@/constants/theme";
-import React from "react";
-<<<<<<< HEAD
-import { Image, StyleSheet, Text, View } from "react-native";
-=======
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
-
 import font from "@/constants/fonts";
 import images from "@/constants/images";
->>>>>>> 6968518a3c28abb77cadd854aedd878bc1315172
+import Colors from "@/constants/theme";
+import React from "react";
+
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+
 import AuthLayout from "./authLayout";
 
 const verification = () => {

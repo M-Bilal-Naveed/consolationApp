@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import icon from '@/constants/images';
-import Color from '@/constants/theme';
-import Feather from '@expo/vector-icons/Feather';
-import { Tabs } from 'expo-router';
-import { Image, StyleSheet, View } from 'react-native';
-=======
 import images from "@/constants/images";
 import Color from "@/constants/theme";
 import Feather from "@expo/vector-icons/Feather";
 import { Tabs } from "expo-router";
 import { Image, StyleSheet, View } from "react-native";
->>>>>>> 6968518a3c28abb77cadd854aedd878bc1315172
 
 const tabLayout = () => {
   return (
