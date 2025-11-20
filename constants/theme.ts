@@ -13,7 +13,9 @@ export default {
     Label: "#6C7278",
     redishButton:"#E11304",
     AuthText:"#1A1C1E",
-     AuthBorder:"#EFF0F6",
+    AuthBorder:"#EFF0F6",
+    tabIcon:"#97A2B0",
+    tabColor:"#14141480",
   },
   dark: {
     text: "#FFFF",
@@ -26,5 +28,7 @@ export default {
     redishButton:"#E11304",
     AuthText:"#1A1C1E",
     AuthBorder:"#EFF0F6",
+    tabIcon:"#97A2B0",
+    tabColor:"#14141480",
   },
 };
