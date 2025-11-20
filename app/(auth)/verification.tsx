@@ -2,22 +2,34 @@ import font from '@/constants/fonts';
 import images from '@/constants/images';
 import Colors from "@/constants/theme";
 import React from "react";
+<<<<<<< HEAD
 import { Image, StyleSheet, Text, View } from "react-native";
+=======
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+
+import font from "@/constants/fonts";
+import images from "@/constants/images";
+>>>>>>> 6968518a3c28abb77cadd854aedd878bc1315172
 import AuthLayout from "./authLayout";
 
 const verification = () => {
   return (
-    <AuthLayout type="Default" ButtonType={false}>
-      <View style={styles.container}>
-        <View style={styles.view}>
-          <Image source={images.verify} style={styles.img} />
-          <Text style={styles.heading}>Check your email and verify</Text>
-          <Text style={styles.subHeading}>
-            Verification link have been sent to you added email
-            Loisbecket@gmail.com
-          </Text>
+    <AuthLayout type="Default" ButtonType={false} centerChildren>
+      <ScrollView
+        contentContainerStyle={{ flexGrow: 1 }}
+        showsVerticalScrollIndicator={false}
+      >
+        <View style={styles.container}>
+          <View style={styles.view}>
+            <Image source={images.verify} style={styles.img} />
+            <Text style={styles.heading}>Check your email and verify</Text>
+            <Text style={styles.subHeading}>
+              Verification link have been sent to you added email
+              Loisbecket@gmail.com
+            </Text>
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </AuthLayout>
   );
 };

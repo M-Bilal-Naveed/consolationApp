@@ -8,18 +8,19 @@ import AuthLayout from "./authLayout";
 const forgetPassword = () => {
   return (
     <AuthLayout type="Default" ButtonType={false}>
-      <View style={styles.container}>
-        <View style={styles.view}>
-          <View style={styles.btnView}>
-            <Text style={styles.heading}>Forgot Your Password</Text>
-            <Text style={styles.subHeading}>
-              A recovery mail will be sent you your account Loisbecket@gmail.com
-            </Text>
-          </View>
+        <View style={styles.container}>
+          <View style={styles.view}> 
+            <View style={styles.btnView}>
+              <Text style={styles.heading}>Forgot Your Password</Text>
+              <Text style={styles.subHeading}>
+                A recovery mail will be sent you your account
+                Loisbecket@gmail.com
+              </Text>
+            </View>
 
-          <CustomButton title="Recover Password" style={styles.btn} />
+            <CustomButton title="Recover Password" style={styles.btn} />
+          </View>
         </View>
-      </View>
     </AuthLayout>
   );
 };

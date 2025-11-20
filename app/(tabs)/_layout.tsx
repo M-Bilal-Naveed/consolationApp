@@ -1,127 +1,125 @@
+<<<<<<< HEAD
 import icon from '@/constants/images';
 import Color from '@/constants/theme';
 import Feather from '@expo/vector-icons/Feather';
 import { Tabs } from 'expo-router';
 import { Image, StyleSheet, View } from 'react-native';
+=======
+import images from "@/constants/images";
+import Color from "@/constants/theme";
+import Feather from "@expo/vector-icons/Feather";
+import { Tabs } from "expo-router";
+import { Image, StyleSheet, View } from "react-native";
+>>>>>>> 6968518a3c28abb77cadd854aedd878bc1315172
 
 const tabLayout = () => {
-
   return (
     <Tabs
-    screenOptions={{
-        tabBarShowLabel:false,
+      screenOptions={{
+        tabBarShowLabel: false,
         tabBarStyle: styles.tabBar,
-    }}
+      }}
     >
-        {/* Home Tab */}
-        <Tabs.Screen 
-        name='home'
+      {/* Home Tab */}
+      <Tabs.Screen
+        name="home"
         options={{
-            tabBarIcon: ({focused}) =>(
-                <View
-                style={[]}
-                >
-                    <Image 
-                    source={focused ? icon.homeRed : icon.home} 
-                    style={styles.img}
-                    />
-                </View>
-            )
+          tabBarIcon: ({ focused }) => (
+            <View style={[]}>
+              <Image
+                source={focused ? images.homeRed : images.home}
+                style={styles.img}
+              />
+            </View>
+          ),
         }}
-        />
-        {/* Search Tab */}
-        <Tabs.Screen 
-        name='search'
+      />
+      {/* Search Tab */}
+      <Tabs.Screen
+        name="search"
         options={{
-            tabBarIcon: ({focused}) =>(
-                <View
-                style={[]}
-                >
-                    <Feather 
-                    name="search" 
-                    size={24} 
-                    color={focused ? Color.light.redishButton: Color.light.tabIcon} />
-                    {/* <Image 
+          tabBarIcon: ({ focused }) => (
+            <View style={[]}>
+              <Feather
+                name="search"
+                size={24}
+                color={focused ? Color.light.redishButton : Color.light.tabIcon}
+              />
+              {/* <Image 
                     source={focused ? icon.homeRed : icon.search} 
                     style={styles.img}
                     /> */}
-                </View>
-            )
+            </View>
+          ),
         }}
-        />
-        {/* Chat Tab */}
-        <Tabs.Screen 
-        name='chat'
+      />
+      {/* Chat Tab */}
+      <Tabs.Screen
+        name="chat"
         options={{
-            tabBarIcon: ({focused}) =>(
-                <View
-                style={[]}
-                >
-                    <Image 
-                    source={focused ? icon.chatRed : icon.chat} 
-                    style={styles.img}
-                    />
-                </View>
-            )
+          tabBarIcon: ({ focused }) => (
+            <View style={[]}>
+              <Image
+                source={focused ? images.chatRed : images.chat}
+                style={styles.img}
+              />
+            </View>
+          ),
         }}
-        />
-        {/* Calender Tab */}
-        <Tabs.Screen 
-        name='calendar'
+      />
+      {/* Calender Tab */}
+      <Tabs.Screen
+        name="calendar"
         options={{
-            tabBarIcon: ({focused}) =>(
-                <View
-                style={[styles.view]}
-                >
-                    <Feather 
-                    name="calendar" 
-                    size={24} 
-                    color={focused ? Color.light.redishButton : Color.light.tabIcon} />
-                    {/* <Image 
+          tabBarIcon: ({ focused }) => (
+            <View style={[styles.view]}>
+              <Feather
+                name="calendar"
+                size={24}
+                color={focused ? Color.light.redishButton : Color.light.tabIcon}
+              />
+              {/* <Image 
                     source={focused ? icon.homeRed : icon.calendar} 
                     style={styles.img}
                     /> */}
-                </View>
-            )
+            </View>
+          ),
         }}
-        />
-        {/* Profile Tab */}
-        <Tabs.Screen 
-        name='profile'
+      />
+      {/* Profile Tab */}
+      <Tabs.Screen
+        name="profile"
         options={{
-            tabBarIcon: ({focused}) =>(
-                <View
-                style={[]}
-                >
-                    <Image 
-                    source={focused ? icon.profileRed : icon.profile} 
-                    style={styles.img}
-                    />
-                </View>
-            )
+          tabBarIcon: ({ focused }) => (
+            <View style={[]}>
+              <Image
+                source={focused ? images.profileRed : images.profile}
+                style={styles.img}
+              />
+            </View>
+          ),
         }}
-        />
+      />
     </Tabs>
-  )
-}
+  );
+};
 
-export default tabLayout
+export default tabLayout;
 
 const styles = StyleSheet.create({
-    img:{
-        width:24,
-        height:24,
-    },
-    tabBar:{
-        width:"100%",
-        height:93,
-        borderWidth:1,
-        borderColor: Color.light.AuthText,
-        borderTopRightRadius:30,
-        borderTopLeftRadius:30,
-        paddingTop:15,
-        backgroundColor: Color.light.tabColor,
-    },
-    view:{
-    }
-})
+  img: {
+    width: 24,
+    height: 24,
+  },
+  tabBar: {
+    width: "100%",
+    height: 93,
+    borderWidth: 1,
+    borderColor: Color.light.AuthText,
+    borderTopRightRadius: 30,
+    borderTopLeftRadius: 30,
+    paddingTop: 15,
+    backgroundColor: Color.light.tabColor,
+  },
+  view: {},
+});
