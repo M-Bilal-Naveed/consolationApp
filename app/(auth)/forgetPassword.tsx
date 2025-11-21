@@ -1,28 +1,37 @@
+import CustomButton from "@/components/buttons/CustomButton";
 import font from "@/constants/fonts";
 import Colors from "@/constants/theme";
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import AuthLayout from "./authLayout";
 
 const forgetPassword = () => {
   return (
-    <AuthLayout  type="Default" ButtonType={false}>
-        {/* <View style={styles.container}>
-          <View style={styles.view}> 
-            <View style={styles.btnView}>
-              <Text style={styles.heading}>Forgot Your Password</Text>
-              <Text style={styles.subHeading}>
-                A recovery mail will be sent you your account
-                Loisbecket@gmail.com
-              </Text>
-            </View>
-
-            <CustomButton title="Recover Password" style={styles.btn} />
-          </View>
+    <AuthLayout type="Default" ButtonType={false}>
+      {/* <View style={styles.container}>
+          
         </View> */}
-        <View style={{flex:1,backgroundColor:"pink"}}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <View style={styles.view}>
+          <View style={styles.btnView}>
+            <Text style={styles.heading}>Forgot Your Password</Text>
+            <View style={styles.textView}>
+              <Text style={styles.text}>
+                A recovery mail will be sent you your account
+              </Text>
+              <Text style={styles.email}>Loisbecket@gmail.com</Text>
+            </View>
+          </View>
 
+          <CustomButton title="Recover Password" style={styles.btn} />
         </View>
+      </View>
     </AuthLayout>
   );
 };
@@ -35,7 +44,6 @@ const styles = StyleSheet.create({
     // justifyContent: "center",
     // alignItems: "center",
     // backgroundColor: Colors.light.background,
-    backgroundColor:"pinks"
   },
   view: {
     width: "100%",
@@ -47,11 +55,21 @@ const styles = StyleSheet.create({
     fontFamily: font.bold,
     textAlign: "center",
   },
-  subHeading: {
+  text: {
     fontSize: 12,
-    color: Colors.light.shadow,
+    color: Colors.light.Label,
     fontFamily: font.medium,
     textAlign: "center",
+    lineHeight: 25,
+  },
+  email: {
+    fontSize: 12,
+    color: Colors.light.Label,
+    fontFamily: font.semiBold,
+    textAlign: "center",
+  },
+  textView: {
+    marginVertical: 20,
   },
   btn: {
     width: "100%",

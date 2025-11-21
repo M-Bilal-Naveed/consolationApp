@@ -1,5 +1,5 @@
-import font from '@/constants/fonts';
-import images from '@/constants/images';
+import font from "@/constants/fonts";
+import images from "@/constants/images";
 import Colors from "@/constants/theme";
 import React from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
@@ -15,11 +15,13 @@ const verification = () => {
         <View style={styles.container}>
           <View style={styles.view}>
             <Image source={images.verify} style={styles.img} />
-            <Text style={styles.heading}>Check your email and verify</Text>
-            <Text style={styles.subHeading}>
-              Verification link have been sent to you added email
-              Loisbecket@gmail.com
-            </Text>
+            <Text style={styles.heading}>Check Your Email And Verify</Text>
+            <View>
+              <Text style={styles.text}>
+                Verification link have been sent to you added email
+              </Text>
+              <Text style={styles.email}>Loisbecket@gmail.com</Text>
+            </View>
           </View>
         </View>
       </ScrollView>
@@ -47,15 +49,21 @@ const styles = StyleSheet.create({
     height: 90,
   },
   heading: {
-    fontSize: 32,
+    fontSize: 25,
     color: Colors.light.text,
     fontFamily: font.bold,
     textAlign: "center",
   },
-  subHeading: {
+  text: {
     fontSize: 12,
-    color: Colors.light.text,
+    color: Colors.light.Label,
     fontFamily: font.medium,
+    textAlign: "center",
+  },
+  email: {
+    fontSize: 12,
+    color: Colors.light.Label,
+    fontFamily: font.Bold,
     textAlign: "center",
   },
 });

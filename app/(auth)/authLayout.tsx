@@ -34,9 +34,7 @@ const AuthLayout = ({
         />
       </View>
 
-      <View style={ [styles.centerChildren,childrenStyle]}>
-        {children}
-      </View>
+      <View style={[styles.centerChildren]}>{children}</View>
       <View>
         {ButtonType ? (
           <View>
@@ -117,10 +115,9 @@ export default AuthLayout;
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
+    flex: 1,
     padding: 20,
-    // backgroundColor: Colors.light.background,
-    backgroundColor:"red"
+    backgroundColor: Colors.light.background,
   },
   linecontainer: {
     flexDirection: "row",
@@ -164,7 +161,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 10,
     marginVertical: 20,
-    backgroundColor:"blue"
   },
   logosNoFlex: {
     flex: 0,
@@ -172,7 +168,7 @@ const styles = StyleSheet.create({
   },
   centerChildren: {
     flex: 1,
-    backgroundColor:"green"
+
     // justifyContent: "center",
     // alignItems: "center",
   },
