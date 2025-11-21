@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   email: {
     fontSize: 12,
     color: Colors.light.Label,
-    fontFamily: font.Bold,
+    fontFamily: font.bold,
     textAlign: "center",
   },
 });
