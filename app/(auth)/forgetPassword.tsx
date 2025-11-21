@@ -1,14 +1,13 @@
-import CustomButton from "@/components/buttons/CustomButton";
 import font from "@/constants/fonts";
 import Colors from "@/constants/theme";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import AuthLayout from "./authLayout";
 
 const forgetPassword = () => {
   return (
-    <AuthLayout type="Default" ButtonType={false}>
-        <View style={styles.container}>
+    <AuthLayout  type="Default" ButtonType={false}>
+        {/* <View style={styles.container}>
           <View style={styles.view}> 
             <View style={styles.btnView}>
               <Text style={styles.heading}>Forgot Your Password</Text>
@@ -20,6 +19,9 @@ const forgetPassword = () => {
 
             <CustomButton title="Recover Password" style={styles.btn} />
           </View>
+        </View> */}
+        <View style={{flex:1,backgroundColor:"pink"}}>
+
         </View>
     </AuthLayout>
   );
@@ -30,9 +32,10 @@ export default forgetPassword;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: Colors.light.background,
+    // justifyContent: "center",
+    // alignItems: "center",
+    // backgroundColor: Colors.light.background,
+    backgroundColor:"pinks"
   },
   view: {
     width: "100%",

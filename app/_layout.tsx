@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
@@ -8,19 +7,6 @@ import 'react-native-reanimated';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { useEffect } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
-=======
-import { useColorScheme } from "@/hooks/use-color-scheme";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from "@react-navigation/native";
-import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
-import { StatusBar } from "expo-status-bar";
-import "react-native-reanimated";
->>>>>>> 6968518a3c28abb77cadd854aedd878bc1315172
 
 export const unstable_settings = {
   anchor: "(tabs)",
@@ -52,11 +38,7 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <Stack>
-<<<<<<< HEAD
-        <Stack.Screen name="(auth)" options={{headerShown: false}} />
-=======
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
->>>>>>> 6968518a3c28abb77cadd854aedd878bc1315172
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />

@@ -34,7 +34,7 @@ const AuthLayout = ({
         />
       </View>
 
-      <View style={centerChildren ? styles.centerChildren : undefined}>
+      <View style={ [styles.centerChildren,childrenStyle]}>
         {children}
       </View>
       <View>
@@ -117,10 +117,10 @@ export default AuthLayout;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-
+    flex:1,
     padding: 20,
-    backgroundColor: Colors.light.background,
+    // backgroundColor: Colors.light.background,
+    backgroundColor:"red"
   },
   linecontainer: {
     flexDirection: "row",
@@ -159,11 +159,12 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   logos: {
-    flex: 1,
+    // flex: 1,
     alignItems: "center",
     flexDirection: "row",
     gap: 10,
     marginVertical: 20,
+    backgroundColor:"blue"
   },
   logosNoFlex: {
     flex: 0,
@@ -171,7 +172,8 @@ const styles = StyleSheet.create({
   },
   centerChildren: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    backgroundColor:"green"
+    // justifyContent: "center",
+    // alignItems: "center",
   },
 });
