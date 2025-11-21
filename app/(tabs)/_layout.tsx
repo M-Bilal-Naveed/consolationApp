@@ -10,6 +10,7 @@ const tabLayout = () => {
       screenOptions={{
         tabBarShowLabel: false,
         tabBarStyle: styles.tabBar,
+        headerShown: false,
       }}
     >
       {/* Home Tab */}

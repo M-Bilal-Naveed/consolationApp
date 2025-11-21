@@ -1,25 +1,40 @@
-import images from "@/constants/images"; // replace with your local image
+import fonts from "@/constants/fonts";
+import Colors from "@/constants/theme";
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 
-const Customer = () => {
+interface CustomerProps {
+  name: string;
+  country: string;
+  languages: string;
+  price: number;
+  image: any;
+}
+
+const Customer = ({
+  name,
+  country,
+  languages,
+  price,
+  image,
+}: CustomerProps) => {
   return (
     <View style={styles.card}>
       {/* Top section: Image + Details */}
       <View style={styles.topSection}>
-        <Image source={images.user} style={styles.avatar} />
+        <Image source={image} style={styles.avatar} />
 
         <View style={styles.details}>
-          <Text style={styles.name}>John Doe</Text>
+          <Text style={styles.name}>{name}</Text>
 
           <View style={styles.infoRow}>
             <Text style={styles.label}>Country: </Text>
-            <Text style={styles.value}>Pakistan</Text>
+            <Text style={styles.value}>{country}</Text>
           </View>
 
           <View style={styles.infoRow}>
             <Text style={styles.label}>Spoken Languages: </Text>
-            <Text style={styles.value}>Urdu, Hindi</Text>
+            <Text style={styles.value}>{languages}</Text>
           </View>
         </View>
       </View>
@@ -30,7 +45,7 @@ const Customer = () => {
           Lorem Ipsum is the dummy language of all the time just to show
           content...
         </Text>
-        <Text style={styles.price}>$50</Text>
+        <Text style={styles.price}>${price}</Text>
       </View>
     </View>
   );
@@ -41,11 +56,10 @@ export default Customer;
 const styles = StyleSheet.create({
   card: {
     borderWidth: 1,
-    borderColor: "#ddd",
     borderRadius: 10,
     padding: 15,
     marginVertical: 10,
-    backgroundColor: "#fff",
+    backgroundColor: Colors.light.cardBackground,
   },
   topSection: {
     flexDirection: "row",
@@ -54,7 +68,6 @@ const styles = StyleSheet.create({
   avatar: {
     width: 70,
     height: 70,
-    borderRadius: 35,
     marginRight: 15,
   },
   details: {
@@ -65,6 +78,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "600",
     marginBottom: 5,
+    color: Colors.light.text,
   },
   infoRow: {
     flexDirection: "row",
@@ -72,25 +86,27 @@ const styles = StyleSheet.create({
   },
   label: {
     fontWeight: "500",
-    color: "#555",
+    color: Colors.light.Label,
   },
   value: {
-    color: "#333",
+    color: Colors.light.text,
   },
   bottomSection: {
-    borderTopWidth: 1,
-    borderTopColor: "#eee",
+    flexDirection: "row",
+    gap: 20,
     paddingTop: 10,
     marginTop: 10,
   },
   description: {
     fontSize: 14,
-    color: "#555",
+    color: Colors.light.Label,
     marginBottom: 5,
+    width: "70%",
   },
   price: {
     fontSize: 16,
-    fontWeight: "600",
-    color: "#FF584C",
+    fontFamily: fonts.semiBold,
+    color: Colors.light.text,
+    top: 30,
   },
 });
