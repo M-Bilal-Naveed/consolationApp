@@ -5,6 +5,7 @@ import { customers } from "@/constants/data";
 import font from "@/constants/fonts";
 import images from "@/constants/images";
 import Colors from "@/constants/theme";
+import { router } from "expo-router";
 import React, { useState } from "react";
 import {
   FlatList,
@@ -31,7 +32,6 @@ const Home = () => {
         horizontal
         showsHorizontalScrollIndicator={true}
         contentContainerStyle={{
-          paddingHorizontal: 20,
           alignItems: "center",
           marginVertical: 50,
         }}
@@ -45,7 +45,10 @@ const Home = () => {
               image={images[title as keyof typeof images]}
               title={title}
               bool={selected === title}
-              onPress={() => setSelected(title)}
+              onPress={() => {
+                setSelected(title);
+                router.push("/(tabs)/home/consultant");
+              }}
             />
           </View>
         ))}

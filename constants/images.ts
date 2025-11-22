@@ -17,4 +17,6 @@ export default {
   Lawyer: require("@/assets/images/Lawyer.png"),
   Arrow: require("@/assets/images/Arrow.png"),
   user: require("@/assets/images/user.png"),
+  filter: require("@/assets/images/filter.png"),
+  Message: require("@/assets/images/Message.png"),
 };
