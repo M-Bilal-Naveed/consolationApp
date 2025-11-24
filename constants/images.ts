@@ -19,4 +19,6 @@ export default {
   user: require("@/assets/images/user.png"),
   filter: require("@/assets/images/filter.png"),
   Message: require("@/assets/images/Message.png"),
+  Flag: require("@/assets/images/flag.png"),
+  leftArrow: require("@/assets/images/leftArrow.png"),
 };

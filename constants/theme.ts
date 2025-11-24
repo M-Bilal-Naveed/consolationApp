@@ -19,6 +19,7 @@ export default {
     Darkgray: "#4D4D4D",
     cardBackground: "#26292E",
     reddishorange: "#FF584C",
+    silver: "#BFBFBF",
   },
   dark: {
     text: "#FFFFFF",

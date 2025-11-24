@@ -1,6 +1,7 @@
 import fonts from "@/constants/fonts";
 import images from "@/constants/images";
 import Colors from "@/constants/theme";
+import { router } from "expo-router";
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import AuthButton from "../buttons/AuthButton";
@@ -23,7 +24,6 @@ const ConsultantView = ({
 }: ConsultantProps) => {
   return (
     <View style={styles.card}>
-      
       <View style={styles.topSection}>
         <Image source={image} style={styles.avatar} />
 
@@ -42,7 +42,6 @@ const ConsultantView = ({
         </View>
       </View>
 
-      
       <View style={styles.bottomSection}>
         <Text style={styles.description}>
           Lorem Ipsum is the dummy language of all the time just to show
@@ -50,7 +49,11 @@ const ConsultantView = ({
         </Text>
       </View>
       <View style={styles.buttons}>
-        <CustomButton title="Hire" style={styles.hire} />
+        <CustomButton
+          title="Hire"
+          style={styles.hire}
+          onPress={() => router.push("/(tabs)/home/consultantInfo")}
+        />
         <AuthButton image={images.Message} style={styles.Message} />
       </View>
     </View>

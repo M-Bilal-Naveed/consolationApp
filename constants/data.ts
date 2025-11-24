@@ -42,3 +42,21 @@ export const customers = [
     image: images.user,
   },
 ];
+export const LanguagesData = [
+  {
+    title: "urdu",
+    languageButton: {
+      width: 50,
+    },
+  },
+  {
+    title: "Hindi",
+    languageButton: {
+      width: 60,
+    },
+  },
+  {
+    title: "English",
+    width: "74",
+  },
+];
