@@ -1,68 +1,60 @@
 import CustomButton from "@/components/buttons/CustomButton";
-
 import Input from "@/components/inputs/input";
 import PasswordInput from "@/components/inputs/password-input";
 import Colors from "@/constants/theme";
-
 import { Link } from "expo-router";
 import React from "react";
-import {
-  KeyboardAvoidingView,
-  Platform,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import AuthLayout from "./authLayout";
 
 const SignIn = () => {
   return (
-    <KeyboardAvoidingView
-      style={{ flex: 1 }}
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
-    >
-      <ScrollView
+    <AuthLayout type="signin" ButtonType={true}>
+      <KeyboardAwareScrollView
         contentContainerStyle={{ flexGrow: 1, paddingBottom: 40 }}
-        showsVerticalScrollIndicator={false}
+        enableOnAndroid
         keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}
       >
-        <AuthLayout type="signin" ButtonType={true}>
-          <View style={styles.container}>
-            <View>
-              <Text style={styles.heading}>Sign in to your Account</Text>
-              <Text style={styles.text}>
-                Enter your email and password to log in
-              </Text>
-            </View>
+        <View style={styles.container}>
+          <View>
+            <Text style={styles.heading}>Sign in to your Account</Text>
+            <Text style={styles.text}>
+              Enter your email and password to log in
+            </Text>
+          </View>
 
-            <View style={{ marginTop: 30 }}>
-              <Text style={styles.label}>Email</Text>
-              <Input
-                placeholdertext="Loisbecket@gmail.com"
-                type="email-address"
-              />
-            </View>
-            <View>
-              <Text style={styles.label}>Password</Text>
-              <PasswordInput placeholdertext="*******" type="password" />
-            </View>
+          <View style={styles.inputContainer}>
+            <Text style={styles.label}>Email</Text>
+            <Input
+              placeholdertext="Loisbecket@gmail.com"
+              type="email-address"
+            />
+          </View>
+          <View>
+            <Text style={styles.label}>Password</Text>
+            <PasswordInput placeholdertext="*******" type="password" />
+          </View>
+          <View style={styles.passwordContainer}>
             <Link href={"/(auth)/forgetPassword"}>
               <Text style={styles.ForgotPassword}>Forgot Password ?</Text>
             </Link>
-            <View style={{ marginTop: 10 }}>
-              <CustomButton title="Log In" />
-            </View>
           </View>
-        </AuthLayout>
-      </ScrollView>
-    </KeyboardAvoidingView>
+          <View style={styles.customButton}>
+            <CustomButton title="Log In" />
+          </View>
+        </View>
+      </KeyboardAwareScrollView>
+    </AuthLayout>
   );
 };
 
 export default SignIn;
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flex: 1,
+  },
   label: {
     color: Colors.light.Label,
     fontFamily: "Poppins-Medium",
@@ -90,6 +82,14 @@ const styles = StyleSheet.create({
     color: Colors.light.redishButton,
     fontSize: 12,
     fontFamily: "Poppins-semiBold",
-    margin: 25,
+  },
+  inputContainer: {
+    marginVertical: 15,
+  },
+  passwordContainer: {
+    marginVertical: 15,
+  },
+  customButton: {
+    marginTop: 30,
   },
 });

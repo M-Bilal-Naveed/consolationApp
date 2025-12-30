@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     borderColor: Colors.light.shadow,
     fontSize: 16,
     color: Colors.dark.text,
-    marginVertical: 10,
+    // marginVertical: 10,
     position: "relative",
   },
   icon: {

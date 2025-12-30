@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: "100%",
     height: 48,
-    borderRadius: 10,
+    borderRadius: 15,
     borderWidth: 1,
     borderColor: Colors.light.redishButton,
   },

@@ -2,62 +2,53 @@ import CustomButton from "@/components/buttons/CustomButton";
 import Input from "@/components/inputs/input";
 import PasswordInput from "@/components/inputs/password-input";
 import Colors from "@/constants/theme";
+import { Link } from "expo-router";
 import React from "react";
-import {
-  KeyboardAvoidingView,
-  Platform,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import AuthLayout from "./authLayout";
 
 const signUp = () => {
   return (
-    <KeyboardAvoidingView
-      style={{ flex: 1 }}
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
-    >
-      <ScrollView
+    <AuthLayout type="signup" ButtonType={true}>
+      <KeyboardAwareScrollView
         contentContainerStyle={{ flexGrow: 1, paddingBottom: 40 }}
-        showsVerticalScrollIndicator={false}
+        enableOnAndroid
         keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}
       >
-        <AuthLayout type="signup" ButtonType={true}>
-          <View style={styles.container}>
-            <View>
-              <Text style={styles.heading}> Sign Up</Text>
-              <Text style={styles.text}>Create an account to continue!</Text>
-            </View>
-            <View style={{ marginTop: 20 }}>
-              <Text style={styles.label}>Full Name</Text>
-              <Input placeholdertext="Lois Becket" type="default" />
-            </View>
-            <View>
-              <Text style={styles.label}>Email</Text>
-              <Input
-                placeholdertext="lois.becket@example.com"
-                type="email-address"
-              />
-            </View>
-            <View>
-              <Text style={styles.label}>Password</Text>
-              <PasswordInput placeholdertext="*******" type="password" />
-            </View>
-            <CustomButton title="Register" style={styles.btnRegister} />
-            {/* <View>
-              <Link href={"/(auth)/signIn"}>
-                <View style={{ flexDirection: "row", gap: 2 }}>
-                  <Text style={styles.text}>Already have an account?</Text>
-                  <Text style={styles.FooterText}>Login</Text>
-                </View>
-              </Link>
-            </View> */}
+        <View style={styles.container}>
+          <View>
+            <Text style={styles.heading}> Sign Up</Text>
+            <Text style={styles.text}>Create an account to continue!</Text>
           </View>
-        </AuthLayout>
-      </ScrollView>
-    </KeyboardAvoidingView>
+          <View style={styles.inputContainer}>
+            <Text style={styles.label}>Full Name</Text>
+            <Input placeholdertext="Lois Becket" type="default" />
+          </View>
+          <View>
+            <Text style={styles.label}>Email</Text>
+            <Input
+              placeholdertext="lois.becket@example.com"
+              type="email-address"
+            />
+          </View>
+          <View style={styles.inputContainer}>
+            <Text style={styles.label}>Set Password</Text>
+            <PasswordInput placeholdertext="*******" type="password" />
+          </View>
+          <CustomButton title="Register" style={styles.btnRegister} />
+          <View>
+            <Link href={"/(auth)/signIn"}>
+              <View style={{ flexDirection: "row", gap: 2 }}>
+                <Text style={styles.text}>Already have an account?</Text>
+                <Text style={styles.FooterText}>Login</Text>
+              </View>
+            </Link>
+          </View>
+        </View>
+      </KeyboardAwareScrollView>
+    </AuthLayout>
   );
 };
 
@@ -86,6 +77,9 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     padding: 2,
     marginTop: 10,
+  },
+  inputContainer: {
+    marginVertical: 20,
   },
   btnRegister: {
     marginTop: 20,
