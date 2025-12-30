@@ -45,6 +45,19 @@ const SignIn = () => {
             <CustomButton title="Log In" />
           </View>
         </View>
+        <View style={styles.loginContainer}>
+                    <Link href={"/(auth)/signUp"}>
+                      <View
+                        style={{
+                          flexDirection: "row",
+                          gap: 2,
+                        }}
+                      >
+                        <Text style={styles.text}>Don’t have an account?</Text>
+                        <Text style={styles.FooterText}>SignUP</Text>
+                      </View>
+                    </Link>
+                  </View>
       </KeyboardAwareScrollView>
     </AuthLayout>
   );
@@ -92,4 +105,17 @@ const styles = StyleSheet.create({
   customButton: {
     marginTop: 30,
   },
+  loginContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    marginVertical: 20,
+  },
+  FooterText: {
+    color: Colors.light.redishButton,
+    fontFamily: "Poppins-Large",
+    fontSize: 12,
+    lineHeight: 20,
+    padding: 2,
+    marginTop: 10,
+  }
 });
