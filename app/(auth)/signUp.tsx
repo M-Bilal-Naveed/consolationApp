@@ -2,7 +2,7 @@ import CustomButton from "@/components/buttons/CustomButton";
 import Input from "@/components/inputs/input";
 import PasswordInput from "@/components/inputs/password-input";
 import Colors from "@/constants/theme";
-import React from "react";
+import React, { useState } from "react";
 import {
   KeyboardAvoidingView,
   Platform,
@@ -11,9 +11,14 @@ import {
   Text,
   View,
 } from "react-native";
+import PhoneInput from 'react-native-international-phone-number';
 import AuthLayout from "./authLayout";
 
-const signUp = () => {
+const SignUp = () => {
+
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [selectedCountry, setSelectedCountry] = useState<any>(undefined);
+
   return (
     <KeyboardAvoidingView
       style={{ flex: 1 }}
@@ -42,6 +47,54 @@ const signUp = () => {
               />
             </View>
             <View>
+              <Text style={styles.label}>Phone Number</Text>
+              <View style={{ marginVertical: 10 }}>
+                <PhoneInput
+                  value={phoneNumber}
+                  onChangePhoneNumber={setPhoneNumber}
+                  selectedCountry={selectedCountry}
+                  onChangeSelectedCountry={setSelectedCountry}
+                  defaultCountry="DK"
+                  placeholder="726-0592"
+                  phoneInputStyles={{
+                    container: {
+                      backgroundColor: Colors.light.shadow, 
+                      borderWidth: 1,
+                      borderColor: Colors.light.shadow,
+                      borderRadius: 10,
+                      paddingHorizontal: 10,
+                      height: 54,
+                    },
+                    input: {
+                      color: Colors.dark.text,
+                      fontSize: 16,
+                      fontFamily: "Poppins-Medium",
+                    },
+                    flagContainer:{
+                      backgroundColor: "#0000",                 
+                      padding: 0, 
+                      margin: 0, 
+                    },
+                    flag: {
+                      fontSize: 24,
+                    },
+                    caret: {
+                      color: Colors.dark.text,
+                      fontSize: 10,
+                    },
+                    divider: {
+                      height: 54,
+                      backgroundColor: Colors.light.shadow,
+                    },
+                    callingCode: {
+                      color: Colors.dark.text,
+                    },
+                }}
+
+                />
+              </View>
+            </View>
+            <View>
               <Text style={styles.label}>Password</Text>
               <PasswordInput placeholdertext="*******" type="password" />
             </View>
@@ -53,7 +106,7 @@ const signUp = () => {
   );
 };
 
-export default signUp;
+export default SignUp;
 
 const styles = StyleSheet.create({
   container: {},
