@@ -28,8 +28,9 @@ const forgetPassword = () => {
               <Text style={styles.email}>Loisbecket@gmail.com</Text>
             </View>
           </View>
-
-          <CustomButton title="Recover Password" style={styles.btn} />
+          <View style={styles.btnContainer}>
+            <CustomButton title="Recover Password" style={styles.btn} />
+          </View>
         </View>
       </View>
     </AuthLayout>
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
     color: Colors.light.Label,
     fontFamily: font.medium,
     textAlign: "center",
-    lineHeight: 25,
+    // lineHeight: 20,
   },
   email: {
     fontSize: 12,
@@ -69,9 +70,13 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   textView: {
-    marginVertical: 20,
+    marginBottom: 20,
+    marginVertical: 5,
   },
   btn: {
     width: "100%",
+  },
+  btnContainer: {
+    marginVertical: 40,
   },
 });

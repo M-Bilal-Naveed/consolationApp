@@ -1,9 +1,7 @@
-import AuthButton from "@/components/buttons/AuthButton";
 import images from "@/constants/images";
 import Colors from "@/constants/theme";
-import { Link } from "expo-router";
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 
 const AuthLayout = ({
   children,
@@ -35,7 +33,7 @@ const AuthLayout = ({
       </View>
 
       <View style={[styles.centerChildren]}>{children}</View>
-      <View>
+      {/* <View>
         {ButtonType ? (
           <View>
             <View style={styles.linecontainer}>
@@ -79,7 +77,7 @@ const AuthLayout = ({
         ) : (
           <View />
         )}
-      </View>
+      </View> */}
 
       {/* <View>
         {type === "signin" ? (

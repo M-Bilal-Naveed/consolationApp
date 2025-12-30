@@ -45,7 +45,15 @@ const signUp = () => {
               <Text style={styles.label}>Password</Text>
               <PasswordInput placeholdertext="*******" type="password" />
             </View>
-            <CustomButton title="Sign Up" style={{ marginTop: 20 }} />
+            <CustomButton title="Register" style={styles.btnRegister} />
+            {/* <View>
+              <Link href={"/(auth)/signIn"}>
+                <View style={{ flexDirection: "row", gap: 2 }}>
+                  <Text style={styles.text}>Already have an account?</Text>
+                  <Text style={styles.FooterText}>Login</Text>
+                </View>
+              </Link>
+            </View> */}
           </View>
         </AuthLayout>
       </ScrollView>
@@ -78,5 +86,8 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     padding: 2,
     marginTop: 10,
+  },
+  btnRegister: {
+    marginTop: 20,
   },
 });
