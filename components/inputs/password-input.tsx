@@ -22,7 +22,7 @@ const PasswordInput: React.FC<InputProps> = ({ placeholdertext, type }) => {
         style={styles.input}
         placeholderTextColor={Colors.dark.text}
       />
-      <View style={{ position: "absolute", right: 10, top: 25 }}>
+      <View style={{ position: "absolute", right: 10, top: 12  }}>
         <TouchableOpacity onPress={handlePassword}>
           <Icon
             name={showPassword ? "eye-off" : "eye"}
