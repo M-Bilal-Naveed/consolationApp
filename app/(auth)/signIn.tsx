@@ -43,7 +43,6 @@ const SignIn = () => {
                 type="email-address"
               />
             </View>
-
             <View>
               <Text style={styles.label}>Password</Text>
               <PasswordInput placeholdertext="*******" type="password" />
