@@ -42,6 +42,7 @@ const SignUp = () => {
             <Text style={styles.label}>Phone Number</Text>
             <View style={{ marginVertical: 10 }}>
               <PhoneInput
+              theme="dark"
                 value={phoneNumber}
                 onChangePhoneNumber={setPhoneNumber}
                 selectedCountry={selectedCountry}
@@ -61,6 +62,7 @@ const SignUp = () => {
                     color: Colors.dark.text,
                     fontSize: 16,
                     fontFamily: "Poppins-Medium",
+                    marginLeft: 0,
                   },
                   flagContainer: {
                     backgroundColor: "#0000",
